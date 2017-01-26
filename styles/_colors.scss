@@ -1,0 +1,30 @@
+$color-black: #212121;
+$color-blue: #334d5c;
+$color-green: #45b29d;
+$color-yellow: #efc94c;
+$color-orange: #e27a3f;
+$color-red: #df4949;
+
+
+$color-map: (
+  'black': $color-black,
+  'blue': $color-blue,
+  'green': $color-green,
+  'yellow': $color-yellow,
+  'orange': $color-orange,
+  'red': $color-red
+);
+
+@mixin color-classes($color-name, $color) {
+  .color-#{$color-name} {
+    color: $color;
+  }
+
+  .color-bg-#{$color-name} {
+    background-color: $color;
+  }
+}
+
+@each $color-name, $color in $color-map {
+  @include color-classes($color-name, $color);
+}

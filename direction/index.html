@@ -1,0 +1,30 @@
+---
+layout: default
+---
+<body class="direction color-bg-yellow pam">
+
+    <h2 class="mbl">Direction and Screen Sizes</h2>
+
+    <pre class="mbm">
+.parent {
+
+    display: flex;
+    flex-direction: column;
+
+    @media (min-width: 768px) {
+        flex-direction: row;
+    }
+
+    .child {
+        flex: 1;
+    }
+}
+    </pre>
+
+    <div class="parent">
+        <div class="child text-center pvm color-bg-green">1</div>
+        <div class="child text-center pvm color-bg-orange">2</div>
+        <div class="child text-center pvm color-bg-red">3</div>
+    </div>
+
+</body>

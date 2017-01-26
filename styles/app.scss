@@ -1,0 +1,69 @@
+---
+---
+@import 'reset';
+@import 'breakpoints';
+@import 'colors';
+@import 'layout';
+@import 'spacing';
+@import 'typography';
+
+html {
+  font-size: 16px;
+}
+
+body {
+  color: $color-black;
+  font-family: 'Rubik', sans-serif;
+  font-size: 2rem;
+  letter-spacing: .04rem;
+
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.content {
+  flex: 1;
+}
+
+a {
+  @extend .mbm;
+  color: $color-blue;
+  text-decoration: none;
+}
+
+
+.media-queries {
+
+  background-color: $color-green;
+
+  @media (min-width: 768px) {
+    background-color: $color-yellow;
+  }
+
+  @media (min-width: 992px) {
+    background-color: $color-orange;
+  }
+
+  @media (min-width: 1200px) {
+    background-color: $color-red;
+  }
+
+}
+
+
+.direction {
+  .parent {
+
+    display: flex;
+    flex-direction: column;
+
+    @media (min-width: 768px) {
+      flex-direction: row;
+    }
+  }
+
+  .child {
+    flex: 1;
+  }
+}
